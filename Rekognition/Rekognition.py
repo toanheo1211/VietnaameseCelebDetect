@@ -48,7 +48,7 @@ def Chuyendoi(anh):
         return source_bytes
 def Sosanh(source_bytes):
     index = 0
-    while (index<15):
+    while (index<17):
         anh = './celebs' + str(index) + '.jpg'
         with open(anh, 'rb') as source_image:
             source_bytes2 = source_image.read()
@@ -75,6 +75,8 @@ def kiemTraNgheSi(index):
         12: 'Erik',
         13: 'Đức Phúc',
         14: 'Hòa Minzy',
+        15: 'Bích Phương',
+        16: 'Đen Vâu',
     }
     return switcher.get(index,"Không nhận dạng được")
 win = Tk()

@@ -22,9 +22,9 @@ from tkinter import filedialog
 # bt.pack(side=TOP,fill=BOTH)
 # bt.bind('<Button-1>',xuly)
 # root.mainloop()
-access_key_id = 'ASIA4AO7KQFMJX434X6G'
-secret_access_key = 'PTngEyUqZi0EOA7GqPIQQwuVseI4V7KpVOW8elA8'
-session_token = 'FwoGZXIvYXdzEAIaDAAIK2So8tPMi1SvWiLPAb2tMaeDetD7Muy32aDAOUbC7Z8uU6zec8r1A4JXZyZhS1CS21Sl3jvJcVoxXh06NgJoSu5cTcjZKD9ROb2CGZ7g4Rx5XjAStJ6oA1FuW3n+vVUvNhQIsMQYTexInF1b8vRCkTXJhL04OAOg9jRU3M57HvpSk1YOV6hhsNgG0VVmwSSo2HMl9THiPvJQzwRLXEu9Jswccc9JrCS0EHxKq95VLM8lD+iEeTG+6jnjJCzQyghyUeXRnvZpqkPZwuKv0PIYnRY/U+KqkbN/lvAYUyizhI2NBjItV6yWAF6gyjpBKZkDOmip/QJmeGQ3NduCyOyRfXr2EP6LHx3khGwdyM4u90f9'
+access_key_id = 'ASIA4AO7KQFMFMXY5OVV'
+secret_access_key = '1Oij2mvpYN9D0OwqEIEgEosJGyaCzA/TiV34CIAU'
+session_token = 'FwoGZXIvYXdzEAYaDPMZ1lI2YVu73eaK8iLPAZyrF2o4UaKf9XNpNrl/GdlZwjXJPJegh2zGBISWI6Kq7h/G4UrinbW/CH659jDQ/EGnSi8kh+jBvTUtf2BJzLQ/Ji7aoqE5S8VwWiVmIYgRJYQWOXWA9Sb1e/q6o1pNQNx7keel5KCRYsuQiz6h2aBRoiuRtnlMWJL0+A0I9TZ+Yxb4yDEChxKoH6gD8inaQzUKhQDTvPV9kHy7o2VIN+BbwuSLg5AQLC7+4kTUxWSRuDXdTQ1Pkgaj+cycmGVywlDh6U87eD/Lmm7zfmMBoCjq5I2NBjItAFfOSIiDkfQtRwmWibhmXOgkHq/vDulyCQNaW9qYph8dnctn5lzhDaUtR366'
 region = 'us-east-1'
 client=boto3.client('rekognition',
                     region_name=region,
@@ -48,7 +48,7 @@ def Chuyendoi(anh):
         return source_bytes
 def Sosanh(source_bytes):
     index = 0
-    while (index<6):
+    while (index<15):
         anh = './celebs' + str(index) + '.jpg'
         with open(anh, 'rb') as source_image:
             source_bytes2 = source_image.read()
@@ -90,7 +90,7 @@ frame_2 = Frame(win,width = 600,height =320,bg = color).place(x=0,y=350)
 
 v = Label(frame_1, width=w, height=h)
 v.place(x=10, y=10)
-cap = cv2.VideoCapture("C:\\Users\\Admin\\Downloads\\QC.mp4")
+cap = cv2.VideoCapture("C:\\Users\\Admin\\Downloads\\QC (1).mp4")
 
 labl = Label(win, text="", width=25, height=2).place(x=350, y=400)
 frm = Label(frame_2,bg="black", width=43, height=13, borderwidth=1).place(x=10, y=370)

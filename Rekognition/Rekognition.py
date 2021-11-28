@@ -90,7 +90,7 @@ frame_2 = Frame(win,width = 600,height =320,bg = color).place(x=0,y=350)
 
 v = Label(frame_1, width=w, height=h)
 v.place(x=10, y=10)
-cap = cv2.VideoCapture("C:\\Users\\Admin\\Downloads\\QC (1).mp4")
+cap = cv2.VideoCapture("C:\\Users\\Admin\\PycharmProjects\\pythonProject\\QC.mp4")
 
 labl = Label(win, text="", width=25, height=2).place(x=350, y=400)
 frm = Label(frame_2,bg="black", width=43, height=13, borderwidth=1).place(x=10, y=370)
